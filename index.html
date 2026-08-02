@@ -1,5 +1,16 @@
-<button onclick="addPDF()">➕ Add PDF</button>
+<div class="tool-container">
 
-<ul id="pdfList"></ul>
+    <h2>Merge PDF</h2>
 
-<button onclick="mergePDFs()">🔗 Merge Now</button>
+    <input type="file" id="pdfInput" accept=".pdf" multiple hidden>
+
+    <button id="addPdf">+ Add PDF</button>
+
+    <div id="fileList"></div>
+
+    <button id="mergeBtn">Merge PDF</button>
+
+</div>
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<script src="script.js"></script>

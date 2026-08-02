@@ -1,16 +1,96 @@
-<div class="tool-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Tool</title>
 
-    <h2>Merge PDF</h2>
+<link rel="stylesheet" href="style.css">
 
-    <input type="file" id="pdfInput" accept=".pdf" multiple hidden>
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 
-    <button id="addPdf">+ Add PDF</button>
+</head>
+<body>
 
-    <div id="fileList"></div>
+<div class="container">
 
-    <button id="mergeBtn">Merge PDF</button>
+<h1>PDF Tool</h1>
+
+<p>Welcome to PDF Tool</p>
+
+<div class="buttons">
+
+<button onclick="openTool('merge')">Merge PDF</button>
+
+<button onclick="openTool('split')">Split PDF</button>
+
+<button onclick="openTool('compress')">Compress PDF</button>
+
+<button onclick="openTool('imgpdf')">Image to PDF</button>
+
+<button onclick="openTool('pdfimg')">PDF to Image</button>
 
 </div>
 
-<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+<!-- Merge PDF -->
+
+<div id="merge" class="tool">
+
+<h2>Merge PDF</h2>
+
+<input type="file" id="pdfInput" accept=".pdf" multiple hidden>
+
+<button id="addPdf">Add PDF</button>
+
+<div id="fileList"></div>
+
+<button id="mergeBtn">Merge PDF</button>
+
+</div>
+
+<!-- Split PDF -->
+
+<div id="split" class="tool">
+
+<h2>Split PDF</h2>
+
+<p>Coming Soon...</p>
+
+</div>
+
+<!-- Compress -->
+
+<div id="compress" class="tool">
+
+<h2>Compress PDF</h2>
+
+<p>Coming Soon...</p>
+
+</div>
+
+<!-- Image to PDF -->
+
+<div id="imgpdf" class="tool">
+
+<h2>Image to PDF</h2>
+
+<p>Coming Soon...</p>
+
+</div>
+
+<!-- PDF to Image -->
+
+<div id="pdfimg" class="tool">
+
+<h2>PDF to Image</h2>
+
+<p>Coming Soon...</p>
+
+</div>
+
+</div>
+
 <script src="script.js"></script>
+
+</body>
+</html>

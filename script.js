@@ -16,9 +16,17 @@ let mergedBlob = null;
 addBtn.onclick = () => input.click();
 
 input.onchange = () => {
+
     for (const file of input.files) {
+
+        if (file.type !== "application/pdf") {
+            alert("JPEG/JPG/PNG files are not allowed. Please select PDF files only.");
+            continue;
+        }
+
         pdfFiles.push(file);
     }
+
     showFiles();
 };
 

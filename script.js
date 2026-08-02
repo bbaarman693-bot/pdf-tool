@@ -1,19 +1,38 @@
+const input = document.getElementById("pdfInput");
+const addBtn = document.getElementById("addPdf");
+const fileList = document.getElementById("fileList");
+
 let pdfFiles = [];
 
-function addPDF() {
-  let input = document.createElement("input");
-  input.type = "file";
-  input.accept = ".pdf";
+addBtn.onclick = () => input.click();
 
-  input.onchange = function () {
-    if (input.files.length > 0) {
-      pdfFiles.push(input.files[0]);
+input.onchange = () => {
 
-      let li = document.createElement("li");
-      li.innerText = input.files[0].name;
-      document.getElementById("pdfList").appendChild(li);
+    for (let file of input.files) {
+        pdfFiles.push(file);
     }
-  };
 
-  input.click();
+    showFiles();
+};
+
+function showFiles() {
+
+    fileList.innerHTML = "";
+
+    pdfFiles.forEach((file,index)=>{
+
+        fileList.innerHTML += `
+        <div class="file-item">
+            <span>${file.name}</span>
+            <button onclick="removeFile(${index})">❌</button>
+        </div>
+        `;
+
+    });
+
+}
+
+function removeFile(index){
+    pdfFiles.splice(index,1);
+    showFiles();
 }

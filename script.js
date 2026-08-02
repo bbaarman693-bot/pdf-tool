@@ -96,3 +96,23 @@ downloadBtn.addEventListener("click", () => {
     URL.revokeObjectURL(url);
 
 });
+// ===== Split PDF =====
+
+const splitPdfInput = document.getElementById("splitPdfInput");
+const selectSplitPdf = document.getElementById("selectSplitPdf");
+const splitFileName = document.getElementById("splitFileName");
+
+let splitPdfFile = null;
+
+selectSplitPdf.addEventListener("click", () => {
+    splitPdfInput.click();
+});
+
+splitPdfInput.addEventListener("change", () => {
+
+    if (splitPdfInput.files.length > 0) {
+        splitPdfFile = splitPdfInput.files[0];
+        splitFileName.textContent = splitPdfFile.name;
+    }
+
+});

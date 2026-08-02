@@ -49,6 +49,10 @@ mergeBtn.addEventListener("click", async () => {
     const mergedPdf = await PDFLib.PDFDocument.create();
 
     for (const file of pdfFiles) {
+        if (file.type !== "application/pdf") {
+    alert("JPEG/JPG/PNG files are not allowed in Merge PDF. Please select PDF files only.");
+    return;
+}
         const bytes = await file.arrayBuffer();
         const pdf = await PDFLib.PDFDocument.load(bytes);
 

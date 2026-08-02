@@ -58,14 +58,29 @@ mergeBtn.addEventListener("click", async () => {
     }
 
     const mergedBytes = await mergedPdf.save();
+mergedBlob = new Blob([mergedBytes], {
+    type: "application/pdf"
+});
 
-    const blob = new Blob([mergedBytes], { type: "application/pdf" });
+downloadBtn.style.display = "inline-block";
 
-    const link = document.createElement("a");
+alert("PDF Merged Successfully!");
+    
+});
+downloadBtn.addEventListener("click", () => {
 
-    link.href = URL.createObjectURL(blob);
+    if (!mergedBlob) {
+        alert("Please merge PDF first.");
+        return;
+    }
 
-    link.download = "Merged.pdf";
+    const url = URL.createObjectURL(mergedBlob);
 
-    link.click();
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "Merged.pdf";
+    a.click();
+
+    URL.revokeObjectURL(url);
+
 });

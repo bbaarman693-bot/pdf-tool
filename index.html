@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDF Tool</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Tool</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
 </head>
 <body>
 
-<h1>PDF Tool</h1>
-<p>Welcome to PDF Tool</p>
+<h1>📄 PDF Merge Tool</h1>
 
-<button onclick="mergePDFs()">Merge PDF</button>
-<button>Split PDF</button>
-<button>Compress PDF</button>
-<button>Image to PDF</button>
-<button>PDF to Image</button>
+<button onclick="addPDF()">➕ Add PDF</button>
+<button onclick="mergePDFs()">🔗 Merge Now</button>
 
-<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<h3>Selected PDFs</h3>
+<ul id="pdfList"></ul>
+
 <script src="script.js"></script>
 
 </body>

@@ -116,3 +116,32 @@ splitPdfInput.addEventListener("change", () => {
     }
 
 });
+// ===== Split PDF =====
+
+const splitBtn = document.getElementById("splitBtn");
+const downloadSplitBtn = document.getElementById("downloadSplitBtn");
+
+let splitBlob = null;
+
+splitBtn.addEventListener("click", async () => {
+
+    if (!splitPdfFile) {
+        alert("Please select a PDF first.");
+        return;
+    }
+
+    const range = document.getElementById("pageRange").value.trim();
+
+    if (range === "") {
+        alert("Please enter page range.");
+        return;
+    }
+
+    if (!range.includes("-")) {
+        alert("Please enter page range like 1-3");
+        return;
+    }
+
+    alert("Perfect! Split logic will be added in the next step.");
+
+});

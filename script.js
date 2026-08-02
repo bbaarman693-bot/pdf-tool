@@ -12,7 +12,7 @@ const fileList = document.getElementById("fileList");
 const mergeBtn = document.getElementById("mergeBtn");
 
 let pdfFiles = [];
-
+let mergedBlob = null;
 addBtn.onclick = () => input.click();
 
 input.onchange = () => {

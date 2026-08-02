@@ -6,7 +6,8 @@
 }
 
 body{
-    background:#f4f6fb;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height:100vh;
 }
 
 .container{
@@ -36,7 +37,8 @@ p{
 }
 
 .buttons button{
-    background:#5b5ff8;
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+}
     color:#fff;
     border:none;
     padding:15px 25px;
@@ -52,11 +54,11 @@ p{
 
 .tool{
     display:none;
-    background:#fff;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    margin-top:20px;
+    background:#ffffff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.20);
+    margin-top:25px;
 }
 
 .tool h2{

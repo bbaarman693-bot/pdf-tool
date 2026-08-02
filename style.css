@@ -1,17 +1,75 @@
-.tool-container{
-    width:80%;
-    max-width:700px;
-    margin:30px auto;
-    text-align:center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-button{
-    padding:12px 25px;
-    margin:10px;
-    border:none;
-    border-radius:8px;
+body{
+    background:#f4f6fb;
+}
+
+.container{
+    max-width:1000px;
+    margin:50px auto;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    color:#5b5ff8;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.buttons button{
     background:#5b5ff8;
     color:#fff;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.buttons button:hover{
+    background:#4444dd;
+}
+
+.tool{
+    display:none;
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    margin-top:20px;
+}
+
+.tool h2{
+    margin-bottom:20px;
+}
+
+#addPdf,#mergeBtn{
+    background:#5b5ff8;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin:10px;
     cursor:pointer;
 }
 
@@ -23,8 +81,31 @@ button{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:10px;
-    margin:8px 0;
-    border:1px solid #ddd;
+    background:#f8f8f8;
     border-radius:8px;
+    padding:10px;
+    margin:10px 0;
+}
+
+.file-item button{
+    background:red;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons button{
+        width:100%;
+    }
+
+    h1{
+        font-size:35px;
+    }
 }
